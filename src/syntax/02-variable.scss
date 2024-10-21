@@ -1,20 +1,21 @@
 $base-color: #bf2243;
 $border-color: rgba($base-color, 0.7);
+$variable: 1rem;
 
 .alert {
-  border: 1px solid $border_color;
+  border: 1px solid $border_color; // ←
 }
 
 :root {
   --primary-color: red;
 }
 
-$color: #05df56;
+$color: #05d156;
 .rule-1 {
   $variable: 2rem !global;
 
   color: $color;
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   padding: $variable;
 }
 
@@ -30,6 +31,7 @@ $base-color: #3b083c !default;
 
 $color: #49abe4;
 .rule-2 {
-  color: $color;
-  background-color: var(--primary-color);
+  color: $base-color;
+  background: var(--primary-color);
+  margin: $variable;
 }
