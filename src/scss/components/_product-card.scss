@@ -52,7 +52,7 @@
   }
 
   .line-break span {
-    @include flex-container(row justify-cnter);
+    @include flex-container(row justify-center);
 
     @include mq(lg) {
       display: inline;
