@@ -1,1 +1,18 @@
 @use './base';
+@use './components/index' as _select;
+
+body {
+  background-color: darkgray;
+}
+
+.combo-ui {
+  @include _select.combo-ui(200px, auto, flex);
+  justify-content: space-between;
+}
+
+.lang-container {
+  @include _select.lang-container(5px, rgba(255, 255, 255, 0.5));
+}
+.combo-ui a {
+  @include _select.login-button(#e50914, #f40612, white);
+}

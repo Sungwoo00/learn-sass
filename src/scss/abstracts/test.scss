@@ -1,5 +1,5 @@
 @use './mixins' as *;
 
 .box {
-  @include size(50px, 19px);
+  @include sieze;
 }

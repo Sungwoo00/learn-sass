@@ -1,0 +1,64 @@
+@mixin combo-ui($width, $height, $display) {
+  width: $width;
+  height: $height;
+  display: $display;
+}
+
+@mixin lang-container($padding, $border-color) {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  padding: $padding;
+
+  figure {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    img {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+    }
+
+    figcaption {
+      display: none;
+    }
+  }
+
+  select {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    appearance: none;
+    outline: none;
+    padding-right: 20px;
+
+    option {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  figure:last-child img {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@mixin login-button($bg-color, $hover-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
