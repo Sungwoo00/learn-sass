@@ -1,0 +1,78 @@
+@use './../base';
+@use './../abstracts/' as *;
+@use './buttons';
+
+.product-card {
+  $block-size-sm: rem(500px);
+  $block-size-lg: rem(650px);
+  $gap: $spacing-2xl;
+  $spacing-start-sm: $spacing-8xl;
+  $spacing-start-lg: $spacing-9xl;
+
+  @include flex-container(column items-center);
+  gap: $gap;
+
+  @include block-size($block-size-sm);
+  @include padding-block-start($spacing-start-sm);
+  @include mq(lg) {
+    @include block-size($block-size-lg);
+    @include padding-block-start($spacing-start-lg);
+  }
+
+  &.dark-bg {
+    $text-color: $white;
+    $bg-color: $black;
+
+    color: $text-color;
+    background-color: $bg-color;
+  }
+
+  &__heading {
+    $headingline-sm: $text-xs;
+    $headingline-lg: $text-lg;
+
+    font-size: $headingline-sm;
+    font-weight: 700;
+
+    @include mq(lg) {
+      font-size: $headingline-lg;
+    }
+  }
+
+  &__description {
+    $description-sm: $text-lg;
+    $description-lg: $text-xl;
+
+    font-size: $description-sm;
+    line-height: 1.5;
+
+    @include mq(lg) {
+      font-size: $description-lg;
+    }
+  }
+
+  .line-break span {
+    @include flex-container(row justify-cnter);
+
+    @include mq(lg) {
+      display: inline;
+    }
+  }
+
+  // 출시일 추후 공개
+  &__release {
+    $release-text: $text-base;
+    // $color: $gray;
+    $color: $secondary-color;
+
+    font-size: $release-text;
+    color: $color;
+  }
+
+  &__links {
+    $gap: $spacing-2xl;
+
+    @include flex-container(row);
+    gap: $gap;
+  }
+}
